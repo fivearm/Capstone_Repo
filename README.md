@@ -21,25 +21,29 @@ Sadly, in April 2015, a 7.8 magnitude earthquake struck the Gorkha District of N
  
 ## Data
 
+The data comes from drivendata.org but was orginally sourced from the Nepal Earthquake Open Data Portal.  It consists of 260,601 records with 38 features plus the target.  The target is ternary: 1 = 'Low Damage', 2 = 'Medium Damage', and 3 = 'Complete Destruction'.  The target is imbalanced: Low Damage = 9.7%, Medium Damage = 56.9%, and Complete Detruction = 33.5%.  
+
+A data dictionary is included in this repository, but the 38 features can broadly be divided into four categories:  binary columns, categorical columns, integer columns, and geographical columns.
+
+Binary columns:  There are 22 binary (or 'flag') columns that use a 1 to designate that a building has that feature, or else a 0. The binary columns are divided into 'has_superstructure' and 'has_secondary_use' characteristics.
+
+Categorical columns:  There are eight categorical columns, with a total of 38 possibles values across all eight columns.
+
+Integer columns:  There are five integer columns.
+
+Geographical columns:  There are three geographical columns, 'geo_level_1_id', 'geo_level_2_id', and 'geo_level_3_id'. Level 1 is the broadest category, with only 30 unique values, followed by level 2 with 1427, and level 3 with 12567. We can assume that this means they represent descending levels of geographic range. So level 1 could be on the order of a city, level 2 a neighborhood, and level 3 a street. We aren't told what exactly they represent, but we at least surmise that they represent incresingly smaller geographical areas.
 
 
- #### Data from Zillow
-    * new_zillow_data.csv
- #### Data from Realtor 
-    * Downloaded from: https://www.realtor.com/research/data/
+ #### Data from drivendata.org
+    * Nepal_Earthquake_train_labels.csv
+    * Nepal_Earthquake_train_values.csv
+
    
 ## Methods
 
-### Zip Code Selection
+### xxxx
 
-For market evaluation, we considered the average pending ratio and average number of days a listing is on the market for. Pending ratio is the ratio of number of listings pending (listings that have accepted an offer) divided by the total number of active listings for a given month. For listing evaluation, we considered the average house value and the number of listings that underwent a price increase. 
 
-For each of these characteristics, we chose to account for the percent change in these averages from one month to the next. This would allow us to choose zip codes that continuously showed growth in the pending ratio, average house value, and number of listings. We counted against houses that showed monthly growth in the number of days on the market.
-
-We weighted the average of these columns for each zip code with the following equation:
-
-zip code score = 0.4(house value change) + 0.2(pending ratio change) + 0.2(price increase change) - 0.2(days on market change)
-We selected the top 5 zipcodes with the highest scores.
     
 ## EDA Results Notable Features
 
