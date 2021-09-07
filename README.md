@@ -114,6 +114,6 @@ Please review my full analysis in different notebooks: [EDA Notebook](./01_Data_
 └── 09_Neural Network.ipynb               <- Neural Network Model
 ├── gitignore                             <- Python files to ignore 
 ├── Presentation.pdf                      <- PDF of the project presentation  
-├── Data Dictionary.txt                   <- Data Dictionary
+├── Data_Dictionary.txt                   <- Data Dictionary
 └── README.md                             <- The README.md
 ```
