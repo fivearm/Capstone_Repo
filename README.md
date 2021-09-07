@@ -45,12 +45,12 @@ Geographical columns:  There are three geographical columns, 'geo_level_1_id', '
 
 
     
-## EDA Results Notable Features
+## EDA Results & Notable Features
 
 
 ### House Value and Price Increase Count
 
-![image](./images/house_value_and_price_increase_count.png)
+
 
 4/5 selected zipcodes contain houses with higher values than the other zipcodes combined. Zip code 28546 has homes with lower values, but a very high price increase rate of change. This indicates an 'up and coming' zip code, where the homes have consistently garnered value throughout time. 
 
