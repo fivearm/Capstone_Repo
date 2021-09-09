@@ -1,4 +1,4 @@
-# Capstone_Repo
+# Modeling Earthquake Building Damage in Nepal
 
  
 **Author**: *Ben Bowman*
