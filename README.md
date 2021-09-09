@@ -6,7 +6,7 @@
 ## Overview
 - [Business Problem](#Business-Problem)
 - [Data](#Data)
-   - [Earthquake Data](./data)
+   - [Earthquake Data](./Data)
 - [Methods](#Methods)
 - [EDA Results: Notable Features](#EDA-Results-Notable-Features) 
 - [Modeling Results](#Modeling-Results)
@@ -34,9 +34,8 @@ Integer columns:  There are five integer columns.
 Geographical columns:  There are three geographical columns, 'geo_level_1_id', 'geo_level_2_id', and 'geo_level_3_id'. Level 1 is the broadest category, with only 30 unique values, followed by level 2 with 1427, and level 3 with 12567. We can assume that this means they represent descending levels of geographic range. So level 1 could be on the order of a city, level 2 a neighborhood, and level 3 a street. We aren't told what exactly they represent, but we at least surmise that they represent increasingly smaller geographical areas.
 
 
- #### Data from drivendata.org
-    * Nepal_Earthquake_train_labels.csv
-    * Nepal_Earthquake_train_values.csv
+ #### [Data from drivendata.org](https://www.drivendata.org/competitions/57/nepal-earthquake/data/)
+
 
    
 ## Methods
@@ -89,7 +88,10 @@ This graphic shows the level of complete destruction based on the materials used
 ## Modeling Results
 
 The metric used for evaluating models is the Micro Averaged F1 Score.  An F1 score reflects a blend of the precision and recall of the model, traditionally used on a binary classifier.  Since there are three possible labels, I will use the Micro Averaged F1 Score variant.  
-    
+ 
+![image](https://user-images.githubusercontent.com/82840623/132690917-eef367e7-2cd5-4968-a1f5-ebfedd97be83.png)
+ 
+ 
 ## Conclusions
 
 
